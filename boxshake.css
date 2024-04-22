@@ -1,0 +1,216 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+@keyframes shake {
+    0%{
+        transform: rotateZ(0deg);
+    }
+
+    10%{
+        transform: rotateZ(-10deg);
+    }
+    
+    20%{
+        transform: rotateZ(10deg);
+    }
+
+    30%{
+        transform: rotateZ(-10deg);
+    }
+
+    40%{
+        transform: rotateZ(10deg);
+    }
+
+    50%{
+        transform: rotateZ(-10deg);
+    }
+    60%{
+        transform: rotateZ(10deg);
+    }
+    70%{
+        transform: rotateZ(-10deg);
+    }
+    80%{
+        transform: rotateZ(10deg);
+    }
+    90%{
+        transform: rotateZ(-10deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    } 
+}
+@keyframes eyes{
+    0%{
+        transform: rotateX(100deg);
+    }
+    25%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(100deg);
+    }
+    75%{
+        transform: rotateX(0deg);
+        transform: scaleY(1.5);
+    }
+    100%{
+        transform: rotateX(0deg);
+        transform: scaleY(1.5);
+    }
+}
+@keyframes eyes2{
+    0%{
+        transform: rotateX(100deg);
+    }
+    25%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(100deg);
+    }
+    75%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(100deg);
+    }
+}
+@keyframes eyes1{
+    0%{
+        transform: rotateX(100deg);
+    }
+    25%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(100deg);
+    }
+    75%{
+        transform: rotateX(0deg);
+        
+    }
+    100%{
+        transform: rotateX(0deg);
+        
+    }
+}
+@keyframes mouth{
+    0%{
+        width: 3vw;
+        height: 1vh;
+        left: 2.5vw;
+
+    }
+    100%{
+        width: 5vw;
+        height: 4.5vh;
+        left: 1.5vw;
+    }
+
+}
+@keyframes eye2{
+    0%{
+        transform: rotateX(100deg);
+
+    }
+    100%{
+        transform: rotateX(0deg);
+        
+    }
+}
+#outer-box{
+    /* position: relative; */
+    /* border: 1px solid; */
+    width: 15vw;
+    height: 15vw;
+    border-radius: 10px;
+    top: 2.5vh;
+    
+}
+#inner-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 10px;
+    background-color: rgb(241, 241, 119);
+    transform-origin: top;
+    box-shadow: 5px 5px 5px rgb(129, 124, 124);
+
+}
+.face{
+    /* border: 1px solid; */
+    width: 8vw;
+    height: 8vw;
+    
+}
+.eyes{
+    
+    position: relative;
+    top: 1vw;
+    width: 100%;
+    height: 4vh;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-evenly;
+    animation: eyes 2s  0.1s 1  normal;
+    /* animation: eyes2 4s  6s infinite  normal; */
+    transform: scaleY(1.5);
+    
+}
+.eyes1{
+    background-color: black;
+width: 2.5vw;
+height: 2.5vw;
+border: 1px solid;
+border-radius: 100%;
+
+}
+#eye2{
+    animation: eye2 1s  2.2s 1  normal;
+}
+.mouth{
+    position: relative;
+    width: 5vw;
+    height: 4.5vh;
+    background-color: black;
+    top: 3vw;
+    left: 1.5vw;
+    border-radius: 0px 0px 50px 50px;
+    animation: mouth 1.2s 1 normal;
+}
+#inner-box:hover {
+    .cheeks{
+        visibility: visible;
+    }
+   .eyes{
+    animation: eyes1 1.5s  0s infinite normal;
+   }
+    animation: shake 3s infinite normal;
+}
+
+.cheeks{
+    width: 18vw;
+    position: relative;
+    top: 0.4vw;
+    left: -5vw;
+    height: 2vh;
+    display: flex;
+    visibility: hidden;
+    justify-content: space-around;
+
+
+}
+.cheek1{
+    width: 3.5vw;
+    height: 1.2vh;
+    background-color: rgb(249, 171, 184);
+    border-radius: 100px 100px 100px 100px;
+}
